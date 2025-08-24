@@ -7,24 +7,24 @@ interface MatchingScoreProps {
 }
 
 const MatchingScore = ({ score, size = 'md' }: MatchingScoreProps) => {
-  const percentage = Math.round(score * 100);
+  const percentage = Math.round(score);
   
   const getScoreColor = (score: number) => {
-    if (score >= 0.8) return 'text-success-600 bg-success-100';
-    if (score >= 0.6) return 'text-warning-600 bg-warning-100';
+    if (score >= 80) return 'text-success-600 bg-success-100';
+    if (score >= 60) return 'text-warning-600 bg-warning-100';
     return 'text-error-600 bg-error-100';
   };
 
   const getScoreLabel = (score: number) => {
-    if (score >= 0.8) return 'Excellent Match';
-    if (score >= 0.6) return 'Good Match';
-    if (score >= 0.4) return 'Fair Match';
+    if (score >= 80) return 'Excellent Match';
+    if (score >= 60) return 'Good Match';
+    if (score >= 40) return 'Fair Match';
     return 'Poor Match';
   };
 
   const getScoreIcon = (score: number) => {
-    if (score >= 0.7) return <TrendingUp className="w-5 h-5" />;
-    if (score >= 0.4) return <Minus className="w-5 h-5" />;
+    if (score >= 70) return <TrendingUp className="w-5 h-5" />;
+    if (score >= 40) return <Minus className="w-5 h-5" />;
     return <TrendingDown className="w-5 h-5" />;
   };
 
@@ -50,7 +50,7 @@ const MatchingScore = ({ score, size = 'md' }: MatchingScoreProps) => {
             transition={{ duration: 1, delay: 0.5 }}
             className="absolute inset-0 rounded-full"
             style={{
-              background: `conic-gradient(${score >= 0.8 ? '#22c55e' : score >= 0.6 ? '#f59e0b' : '#ef4444'} ${percentage * 3.6}deg, #e5e7eb 0deg)`,
+              background: `conic-gradient(${score >= 80 ? '#22c55e' : score >= 60 ? '#f59e0b' : '#ef4444'} ${percentage * 3.6}deg, #e5e7eb 0deg)`,
             }}
           />
           <div className="relative z-10 bg-white rounded-full w-full h-full flex items-center justify-center">
@@ -90,19 +90,19 @@ const MatchingScore = ({ score, size = 'md' }: MatchingScoreProps) => {
         <div className="flex justify-between text-sm">
           <span className="text-gray-600">Skills Match</span>
           <span className="font-medium text-gray-900">
-            {Math.round(score * 85)}%
+            {Math.round(score * 0.85)}%
           </span>
         </div>
         <div className="flex justify-between text-sm">
           <span className="text-gray-600">Experience Match</span>
           <span className="font-medium text-gray-900">
-            {Math.round(score * 90)}%
+            {Math.round(score * 0.90)}%
           </span>
         </div>
         <div className="flex justify-between text-sm">
           <span className="text-gray-600">Cultural Fit</span>
           <span className="font-medium text-gray-900">
-            {Math.round(score * 75)}%
+            {Math.round(score * 0.75)}%
           </span>
         </div>
       </motion.div>

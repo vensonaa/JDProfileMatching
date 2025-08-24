@@ -28,7 +28,30 @@ const ResultsPage = () => {
 
   useEffect(() => {
     const fetchAnalysis = async () => {
-      if (!id) return;
+      // Check for demo data first
+      const demoData = localStorage.getItem('demoAnalysis');
+      console.log('Checking for demo data:', demoData ? 'Found' : 'Not found');
+      
+      if (demoData) {
+        try {
+          const demoAnalysis = JSON.parse(demoData);
+          console.log('Demo analysis loaded:', demoAnalysis);
+          setAnalysis(demoAnalysis);
+          setLoading(false);
+          // Clear demo data after loading
+          localStorage.removeItem('demoAnalysis');
+          return;
+        } catch (err) {
+          console.error('Error parsing demo data:', err);
+        }
+      }
+      
+      // Only fetch from API if we have an ID and no demo data
+      if (!id) {
+        setError('No analysis ID provided');
+        setLoading(false);
+        return;
+      }
       
       try {
         const data = await apiService.getAnalysis(parseInt(id));
@@ -50,7 +73,7 @@ const ResultsPage = () => {
     const resultsText = `
 JD-Profile Matching Analysis Results
 
-Matching Score: ${Math.round(analysis.matching_score * 100)}%
+Matching Score: ${Math.round(analysis.matching_score)}%
 
 Resume Summary:
 ${analysis.resume_summary}
@@ -84,7 +107,7 @@ Experience Match:
       try {
         await navigator.share({
           title: 'JD-Profile Matching Analysis',
-          text: `Check out this JD-Profile matching analysis with ${Math.round(analysis!.matching_score * 100)}% match score!`,
+          text: `Check out this JD-Profile matching analysis with ${Math.round(analysis!.matching_score)}% match score!`,
           url: window.location.href,
         });
       } catch (err) {
@@ -156,6 +179,27 @@ Experience Match:
           </button>
         </div>
       </motion.div>
+
+      {/* Demo Indicator */}
+      {analysis.id === 1 && (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+          className="bg-gradient-to-r from-primary-100 to-secondary-100 border border-primary-200 rounded-lg p-4"
+        >
+          <div className="flex items-center space-x-3">
+            <Info className="w-5 h-5 text-primary-600" />
+            <div>
+              <h3 className="font-semibold text-primary-800">Demo Mode</h3>
+              <p className="text-primary-700 text-sm">
+                This is a sample analysis showing how the JD-Profile matching works. 
+                Try uploading your own resume and job description for a real analysis!
+              </p>
+            </div>
+          </div>
+        </motion.div>
+      )}
 
       {/* Matching Score */}
       <motion.div

@@ -1,5 +1,7 @@
 import os
-from pydantic import BaseSettings
+from typing import List
+from pydantic import Field
+from pydantic_settings import BaseSettings
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -18,7 +20,7 @@ class Settings(BaseSettings):
     
     # File Upload
     max_file_size: int = 10 * 1024 * 1024  # 10MB
-    allowed_file_types: list = [".pdf", ".docx", ".doc"]
+    allowed_file_types: List[str] = Field(default=[".pdf", ".docx", ".doc", ".txt"], exclude=True)
     
     # LangGraph Configuration
     max_retries: int = 3
@@ -26,5 +28,6 @@ class Settings(BaseSettings):
     
     class Config:
         env_file = ".env"
+        extra = "ignore"
 
 settings = Settings()

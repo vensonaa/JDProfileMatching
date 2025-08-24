@@ -1,64 +1,74 @@
 JOHN DOE
 Software Engineer
 john.doe@email.com | (555) 123-4567 | linkedin.com/in/johndoe
+San Francisco, CA
 
 PROFESSIONAL SUMMARY
-Experienced software engineer with 5+ years of expertise in full-stack development, specializing in React, Node.js, and Python. Proven track record of delivering scalable web applications and leading development teams. Passionate about clean code, user experience, and emerging technologies.
+Experienced software engineer with 5+ years of expertise in full-stack development, specializing in Python, JavaScript, and React. Proven track record of delivering scalable web applications and leading development teams. Passionate about clean code, user experience, and emerging technologies.
 
 TECHNICAL SKILLS
-Programming Languages: JavaScript, TypeScript, Python, Java, SQL
-Frontend: React, Vue.js, HTML5, CSS3, Tailwind CSS, Bootstrap
-Backend: Node.js, Express.js, Python, Django, FastAPI
+Programming Languages: Python, JavaScript, TypeScript, Java, SQL
+Frontend Technologies: React, Angular, HTML5, CSS3, Bootstrap, Tailwind CSS
+Backend Technologies: Node.js, Django, Flask, Express.js
 Databases: PostgreSQL, MongoDB, MySQL, Redis
-Cloud & DevOps: AWS, Docker, Kubernetes, CI/CD, Git
-Tools & Frameworks: Webpack, Babel, Jest, Cypress, Postman
+Cloud & DevOps: AWS, Docker, Kubernetes, CI/CD, Git, GitHub Actions
+Tools & Frameworks: VS Code, Jira, Postman, Swagger, Jest, PyTest
 
 PROFESSIONAL EXPERIENCE
 
-Senior Software Engineer | TechCorp Inc. | 2021 - Present
+Senior Software Engineer | TechCorp Inc. | San Francisco, CA | 2022 - Present
 • Led development of a microservices-based e-commerce platform serving 100K+ users
-• Implemented CI/CD pipelines reducing deployment time by 60%
-• Mentored 3 junior developers and conducted code reviews
-• Technologies: React, Node.js, PostgreSQL, AWS, Docker
+• Implemented RESTful APIs using Python/Django and Node.js, improving system performance by 40%
+• Mentored 3 junior developers and conducted code reviews to maintain code quality
+• Collaborated with product managers to define technical requirements and project timelines
+• Reduced API response time by 60% through database optimization and caching strategies
 
-Full Stack Developer | StartupXYZ | 2019 - 2021
-• Built responsive web applications using React and Node.js
-• Integrated third-party APIs and payment gateways
-• Optimized database queries improving performance by 40%
-• Technologies: React, Node.js, MongoDB, Express.js
+Full-Stack Developer | StartupXYZ | San Francisco, CA | 2020 - 2022
+• Developed and maintained React-based web applications with TypeScript
+• Built scalable backend services using Python Flask and PostgreSQL
+• Implemented real-time features using WebSockets and Redis
+• Deployed applications on AWS using Docker and Kubernetes
+• Participated in agile development cycles with 2-week sprints
 
-Junior Developer | WebSolutions | 2018 - 2019
-• Developed and maintained client websites
-• Collaborated with design team to implement UI/UX improvements
-• Participated in agile development processes
-• Technologies: JavaScript, HTML, CSS, PHP, MySQL
-
-PROJECTS
-
-E-Commerce Platform (2022)
-• Full-stack e-commerce solution with payment integration
-• React frontend with Redux state management
-• Node.js backend with RESTful APIs
-• PostgreSQL database with Redis caching
-
-Task Management App (2021)
-• Real-time collaborative task management application
-• React frontend with Socket.io for real-time updates
-• Node.js backend with JWT authentication
-• MongoDB for data storage
+Junior Developer | WebSolutions | San Francisco, CA | 2019 - 2020
+• Created responsive web interfaces using HTML, CSS, and JavaScript
+• Developed REST APIs using Python and Django REST Framework
+• Collaborated with design team to implement user-friendly interfaces
+• Participated in code reviews and contributed to team documentation
 
 EDUCATION
-Bachelor of Science in Computer Science
-University of Technology | 2014 - 2018
-GPA: 3.8/4.0
+Bachelor of Science in Computer Science | University of California, Berkeley | 2019
+• GPA: 3.8/4.0
+• Relevant Coursework: Data Structures, Algorithms, Software Engineering, Database Systems
+• Senior Project: Developed a machine learning-based recommendation system
 
 CERTIFICATIONS
 • AWS Certified Developer Associate
+• Google Cloud Professional Developer
 • MongoDB Certified Developer
-• React Developer Certification
+
+PROJECTS
+E-Commerce Platform (2023)
+• Built a full-stack e-commerce solution using React, Node.js, and MongoDB
+• Implemented payment processing with Stripe API
+• Deployed on AWS with CI/CD pipeline using GitHub Actions
+
+Task Management App (2022)
+• Developed a collaborative task management application using React and Django
+• Implemented real-time updates using WebSockets
+• Added user authentication and role-based access control
+
+Weather Dashboard (2021)
+• Created a weather dashboard using React and OpenWeatherMap API
+• Implemented geolocation features and weather forecasting
+• Deployed on Netlify with automatic deployments
 
 LANGUAGES
-English (Native), Spanish (Conversational)
+• English (Native)
+• Spanish (Conversational)
 
 INTERESTS
-Open source contribution, Machine Learning, Blockchain technology, Hiking
+• Open source contribution
+• Machine learning and AI
+• Web accessibility
+• Sustainable software development

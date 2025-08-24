@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { 
   Brain, 
   Target, 
@@ -12,6 +12,74 @@ import {
 } from 'lucide-react';
 
 const HomePage = () => {
+  const navigate = useNavigate();
+
+  const handleDemo = () => {
+    console.log('Demo button clicked!');
+    
+    // Sample demo data
+    const demoAnalysis = {
+      id: 1,
+      matching_score: 78.5,
+      resume_summary: "Experienced software engineer with 5+ years in full-stack development, specializing in React, Node.js, and Python. Led multiple successful projects including an e-commerce platform serving 10,000+ users. Strong background in agile methodologies and team leadership.",
+      interview_insights: {
+        discussion_topics: [
+          "Technical architecture decisions",
+          "Team leadership experience",
+          "Project scaling challenges",
+          "Technology stack evolution",
+          "Career growth and goals"
+        ],
+        candidate_strengths: [
+          "Full-stack development expertise",
+          "Project management skills",
+          "Team collaboration",
+          "Problem-solving abilities"
+        ],
+        areas_for_improvement: [
+          "Cloud infrastructure experience",
+          "Machine learning knowledge"
+        ],
+        technical_questions: [
+          "Describe a challenging technical problem you solved",
+          "How do you approach code reviews?",
+          "What's your experience with microservices?"
+        ],
+        behavioral_questions: [
+          "Tell me about a time you led a team through a difficult project",
+          "How do you handle conflicting priorities?",
+          "Describe a situation where you had to learn a new technology quickly"
+        ],
+        cultural_fit: "Candidate demonstrates strong collaborative skills and aligns well with our team-oriented culture."
+      },
+      skills_match: {
+        perfect_match: ["JavaScript", "React", "Node.js", "Python", "Git"],
+        partial_match: ["TypeScript", "MongoDB", "Docker"],
+        missing_skills: ["Kubernetes", "AWS", "Machine Learning"],
+        bonus_skills: ["Agile", "Team Leadership", "Project Management"],
+        confidence_level: "High"
+      },
+      experience_match: {
+        years_experience: "5+ years vs 3+ years required",
+        role_level: "Senior level candidate for senior position",
+        industry_relevance: "Strong software development background",
+        project_complexity: "Handled complex e-commerce and management systems",
+        leadership_experience: "Mentored junior developers and led teams",
+        overall_assessment: "Candidate exceeds experience requirements"
+      },
+      created_at: new Date().toISOString()
+    };
+
+    console.log('Demo data created:', demoAnalysis);
+    console.log('Storing in localStorage...');
+
+    // Store demo data in localStorage and navigate to results
+    localStorage.setItem('demoAnalysis', JSON.stringify(demoAnalysis));
+    
+    console.log('Navigating to /results...');
+    navigate('/results/1');
+  };
+
   const features = [
     {
       icon: Brain,
@@ -90,7 +158,7 @@ const HomePage = () => {
               Start Analysis
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-            <button className="btn-secondary text-lg px-8 py-4">
+            <button onClick={handleDemo} className="btn-secondary text-lg px-8 py-4">
               Watch Demo
             </button>
           </div>

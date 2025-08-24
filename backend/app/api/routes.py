@@ -77,10 +77,17 @@ async def analyze_match(
 @router.post("/upload-resume")
 async def upload_resume(file: UploadFile = File(...)):
     """Upload and extract text from resume file"""
+    print(f"Upload resume called with file: {file.filename}")
     try:
+        print("About to call FileService.extract_text_from_file")
         resume_text = await FileService.extract_text_from_file(file)
+        print(f"Successfully extracted text: {len(resume_text)} characters")
         return {"resume_text": resume_text}
     except Exception as e:
+        print(f"Error in upload_resume: {e}")
+        print(f"Error type: {type(e)}")
+        import traceback
+        traceback.print_exc()
         raise HTTPException(status_code=400, detail=str(e))
 
 @router.post("/summarize-resume", response_model=ResumeSummaryResponse)
