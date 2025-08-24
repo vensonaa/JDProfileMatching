@@ -1,0 +1,55 @@
+Senior Full Stack Software Engineer
+
+About Us:
+We are a fast-growing technology company looking for a Senior Full Stack Software Engineer to join our dynamic team. You will be responsible for developing and maintaining scalable web applications, working with cutting-edge technologies, and contributing to our product roadmap.
+
+Job Description:
+We are seeking a talented Senior Full Stack Software Engineer to join our development team. You will work on building and maintaining web applications, collaborating with cross-functional teams, and contributing to technical decisions.
+
+Key Responsibilities:
+• Design, develop, and maintain scalable web applications
+• Write clean, maintainable, and efficient code
+• Collaborate with product managers, designers, and other engineers
+• Participate in code reviews and technical discussions
+• Mentor junior developers and share knowledge
+• Troubleshoot and debug complex issues
+• Optimize application performance and user experience
+• Stay up-to-date with emerging technologies and best practices
+
+Required Skills:
+• 5+ years of experience in software development
+• Strong proficiency in JavaScript/TypeScript
+• Experience with React.js and modern frontend frameworks
+• Backend development experience with Node.js or Python
+• Database experience (PostgreSQL, MongoDB, or similar)
+• Experience with RESTful APIs and microservices
+• Knowledge of version control systems (Git)
+• Understanding of software development best practices
+• Strong problem-solving and analytical skills
+• Excellent communication and teamwork abilities
+
+Preferred Skills:
+• Experience with cloud platforms (AWS, Azure, or GCP)
+• Knowledge of Docker and containerization
+• Experience with CI/CD pipelines
+• Understanding of DevOps practices
+• Experience with testing frameworks (Jest, Cypress)
+• Knowledge of agile development methodologies
+• Experience with real-time applications (WebSockets)
+• Understanding of security best practices
+
+Education:
+• Bachelor's degree in Computer Science, Software Engineering, or related field
+• Equivalent work experience will be considered
+
+Benefits:
+• Competitive salary and equity package
+• Health, dental, and vision insurance
+• Flexible work arrangements
+• Professional development opportunities
+• Modern office environment
+• Team events and activities
+
+Location: Remote/Hybrid (San Francisco, CA)
+
+We are an equal opportunity employer and value diversity at our company. We do not discriminate on the basis of race, religion, color, national origin, gender, sexual orientation, age, marital status, veteran status, or disability status.
